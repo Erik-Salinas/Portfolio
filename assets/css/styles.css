@@ -1,0 +1,115 @@
+:root{ 
+    --first-color:#1742a1;
+    --second-color:red;
+    --thir-color:red;
+    
+    --nav-typografia:"Montserrat", sans-serif; /* 400 */
+    --title-tyupografia:"Playfair Display", serif;  /* 400 y 700 */
+    --text-tyupografia:"Roboto", sans-serif;  /* 400 */
+
+    --nav-size:1.2rem;
+    --title-size:1.5rem;
+    --text-size:1rem;
+
+    --title-color:#000000;
+    --text-first-color:#100f0f;
+    --text-second-color:#ffffff;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li,a{
+    list-style: none;
+    text-decoration: none;
+}
+/**NAVEGACIÓN**/
+.nav{
+    background-color: var(--text-first-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__list{
+    display: flex;
+    width: 100%;
+}
+.nav__item{
+    margin-right: 20px;
+}
+.nav__item:last-child {
+    margin-right: -0; /* Quitar el margen del último elemento */
+}
+.nav__item--download{
+    margin-left: auto;
+}
+.nav__link{
+    font-size: var(--nav-size);
+    color: var(--title-color);
+    font-family: var(--nav-typografia);
+}
+
+/**SOBRE MI**/
+.profile{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 1rem  0.7rem;
+}
+
+.profile__title, .ability__title{
+    font-size: var(--title-size);
+    font-weight: 700;
+    text-align: center;
+    font-family: var(--title-tyupografia);
+    color: var(--title-color);
+}
+.profile__description, .ability__description{
+    font-size: var(--text-size);
+    font-weight: 400;
+    text-align: center;
+    font-family: var(--text-tyupografia);
+    color: var(--text-first-color);
+    margin-top: 1rem;
+    line-height: 1.5; 
+}
+.profile__image-container{
+    width: 50%;
+}
+.profile__image{
+    width: 100%;
+    border-radius: 100%;
+}
+
+/* *HABILIDAD* */
+
+.ability{
+    background-color: var(--first-color);
+}
+.ability__technology{
+    margin: 1rem  0.7rem;
+}
+.ability__title{
+    padding-top: 1rem;
+    color: white;
+}
+.ability__description{
+    color: var(--text-second-color);
+}
+.ability__image-container{
+    margin: 1rem  0.7rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+}
+.ability__image{
+    width: 15vw;
+}
+.ability__image img{
+    width: 100%;
+}
