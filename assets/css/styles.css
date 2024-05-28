@@ -1,105 +1,131 @@
-:root{ 
-    --first-color:#1742a1;
-    --second-color:red;
-    --thir-color:red;
-    
-    --nav-typografia:"Montserrat", sans-serif; /* 400 */
-    --title-tyupografia:"Playfair Display", serif;  /* 400 y 700 */
-    --text-tyupografia:"Roboto", sans-serif;  /* 400 */
+:root {
+    --first-color: #1742a1;
+    --second-color: #ffffff;
 
-    --nav-size:1.2rem;
-    --title-size:1.5rem;
-    --text-size:1rem;
+    --nav-typografia: "Montserrat", sans-serif;
+    /* 400 */
+    --title-tyupografia: "Playfair Display", serif;
+    /* 400 y 700 */
+    --text-tyupografia: "Roboto", sans-serif;
+    /* 400 */
 
-    --title-color:#000000;
-    --text-first-color:#100f0f;
-    --text-second-color:#ffffff;
+    --nav-size: 1.2rem;
+    --title-size: 1.5rem;
+    --text-size: 1rem;
+    --card-size:1.3rem;
+    --botton-size:1rem;
+
+    --title-color: #000000;
+    --title-first-color:#ffffff;
+
+    --text-first-color: #100f0f;
+    --text-second-color: #ffffff;
 }
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-li,a{
+li,
+a {
     list-style: none;
     text-decoration: none;
 }
+
 /**NAVEGACIÓN**/
-.nav{
+.nav {
     background-color: var(--text-first-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.nav__list{
+
+.nav__list {
     display: flex;
     width: 100%;
 }
-.nav__item{
+
+.nav__item {
     margin-right: 20px;
 }
+
 .nav__item:last-child {
-    margin-right: -0; /* Quitar el margen del último elemento */
+    margin-right: -0;
+    /* Quitar el margen del último elemento */
 }
-.nav__item--download{
+
+.nav__item--download {
     margin-left: auto;
 }
-.nav__link{
+
+.nav__link {
     font-size: var(--nav-size);
     color: var(--title-color);
     font-family: var(--nav-typografia);
 }
 
 /**SOBRE MI**/
-.profile{
+.profile {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    margin: 1rem  0.7rem;
+    margin: 1rem 0.7rem;
 }
 
-.profile__title, .ability__title{
+.profile__title,
+.ability__title,
+.project__title,
+.contact__title {
     font-size: var(--title-size);
     font-weight: 700;
     text-align: center;
     font-family: var(--title-tyupografia);
     color: var(--title-color);
 }
-.profile__description, .ability__description{
+
+.profile__description,
+.ability__description {
     font-size: var(--text-size);
     font-weight: 400;
     text-align: center;
     font-family: var(--text-tyupografia);
     color: var(--text-first-color);
     margin-top: 1rem;
-    line-height: 1.5; 
+    line-height: 1.5;
 }
-.profile__image-container{
+
+.profile__image-container {
     width: 50%;
 }
-.profile__image{
+
+.profile__image {
     width: 100%;
     border-radius: 100%;
 }
 
 /* *HABILIDAD* */
 
-.ability{
+.ability, .contact {
     background-color: var(--first-color);
 }
-.ability__technology{
-    margin: 1rem  0.7rem;
+
+.ability__technology {
+    margin: 1rem 0.7rem;
 }
-.ability__title{
+
+.ability__title {
     padding-top: 1rem;
-    color: white;
+    color: var(--title-first-color);
 }
-.ability__description{
+
+.ability__description {
     color: var(--text-second-color);
 }
-.ability__image-container{
-    margin: 1rem  0.7rem;
+
+.ability__image-container {
+    margin: 1rem 0.7rem;
     padding-bottom: 1rem;
     display: flex;
     flex-wrap: wrap;
@@ -107,9 +133,157 @@ li,a{
     align-items: center;
     gap: 5px;
 }
-.ability__image{
+
+.ability__image {
     width: 15vw;
 }
-.ability__image img{
+
+.ability__image img {
     width: 100%;
+}
+
+.ability__image--mysql {
+    background-color: #ffffff;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ability__image--mysql img {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+/* *PROYECTOS* */
+.project{
+    margin: 1rem 0.7rem;
+}
+
+.project__card{
+    background-color: var(--first-color);
+    border-radius: 5px ;
+    margin-top: 1rem;
+}
+.project__image{
+    width: 100%;
+    border-radius: 5px  5px 0 0;
+}
+.project__information{
+    margin: 0 0.7rem;
+}
+.project__name{
+    color: var(--title-first-color);
+    font-family: var(--text-tyupografia);
+    font-size: var(--card-size);
+    margin: 0.5rem 0;
+}
+.project__description, .contact__description{
+    color: var(--text-second-color);
+    font-family: var(--text-tyupografia);
+    font-size: var(--text-size);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.project__link{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    padding: 0.4rem 0;
+}
+ .project__a{
+    font-size: var(--botton-size);
+    color:var(--text-second-color) ;
+    font-size: var(--text-size);
+    padding: 0.2rem 1rem;
+    border: black 1px solid;
+}
+
+.project__a--disable  {
+    pointer-events: none;
+    color: #808080;
+    cursor: not-allowed;
+    border: #808080 1px solid;
+}
+
+/* *CONTACTO* */
+.contact{
+    padding: 0.4rem;
+}
+.contact__container{
+    margin: 1rem 0.7rem;
+}
+.contact__title{
+    color: var(--title-first-color);
+}
+.contact__description{
+    margin-top: 1rem;
+    text-align: center;
+}
+.contact__form{
+    background-color: var(--second-color);
+    max-width: 100%;
+    margin: 1rem 0.7rem;
+    padding: 1rem 0;
+    border-radius: 5px;
+}
+.contact__form-group{
+    width: 90%;
+    margin: 0.5rem auto;
+}
+.contact__input, .contact__select{
+    width: 100%;
+    height: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--first-color);
+    outline: none;
+    padding:0 0.6rem;
+    font-family: var(--text-tyupografia);
+    color: var(--text-first-color);
+}
+
+.contact__textarea{
+    width: 100%;
+    height: 20vh;
+    resize: none;
+    padding: 0.2rem 0.6rem;
+    font-family: var(--text-tyupografia);
+    border-radius: 10px;
+    border: 1px solid var(--first-color);
+    outline: none;
+}
+.contact__button{
+    border:1px solid var(--first-color);
+    font-family: var(--text-tyupografia);
+    border-radius: 5px;
+    font-size: 0.8rem;
+    padding: 0.2rem 1rem ;
+}
+.contact__form-group--button{
+    text-align: end;
+}
+
+/* * FOOTER* */
+.footer{
+    background-color: var(--first-color);
+    margin-top: 1rem;
+}
+.footer__container{
+    margin: 0 0.7rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.footer__title{
+    color: var(--text-second-color);
+    margin: 0.5rem 0;
+}
+.footer__email, .footer__tel{
+color: var(--text-first-color-color);
+}
+.footer__group--rights{
+    text-align: center;
+    color: var(--text-second-color);
+    font-size:0.7rem ;
 }
