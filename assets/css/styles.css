@@ -586,7 +586,20 @@ ser alcanzado por determinados puntos durante la animación. */
         opacity: 1;
     }
 }
-
+.fa-whatsapp{
+    font-size: 3rem;
+    color: #ffffff;
+    background-color: #0cba0c;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+}
 /* *PIE DE PAGÍNA */
 .footer {
     background-color: var(--first-color);
@@ -743,7 +756,7 @@ ser alcanzado por determinados puntos durante la animación. */
     .contact__form {
         width: 100%;
     }
-
+    
     /* *FOOTER* */
     .footer {
         margin-top: 4rem;
@@ -899,7 +912,7 @@ ser alcanzado por determinados puntos durante la animación. */
     }
 
     .profile__image {
-        width: 100%;
+        max-width: 80%;
         border-radius: 100%;
     }
 
