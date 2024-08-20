@@ -33,6 +33,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 li,
@@ -391,9 +392,9 @@ img {
 }
 
 .project__a {
-    font-size: var(--botton-size);
     color: var(--text-second-color);
     font-size: var(--text-size);
+    font-family: var(--text-tyupografia);
     padding: 0.2rem 1rem;
     border: black 1px solid;
 }
@@ -686,7 +687,7 @@ ser alcanzado por determinados puntos durante la animación. */
     }
 
     /* *PROYECTOS* */
-    .project {
+     .project {
         margin: 2rem 4rem 2rem 4rem;
     }
 
@@ -697,11 +698,18 @@ ser alcanzado por determinados puntos durante la animación. */
     .project__card {
         max-width: 40vw;
     }
-
-    .project__list {
+ 
+     .project__list {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 1.2rem;
+    }
+    .project__list--modified{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.2rem;
     }
 
     .project__card.scroll-down {
@@ -983,8 +991,7 @@ ser alcanzado por determinados puntos durante la animación. */
     .project__list {
         display: flex;
         flex-wrap: wrap;
-        /* justify-content: center; */
-        gap: 1.2rem;
+       
         margin-bottom: 2rem;
     }
 
