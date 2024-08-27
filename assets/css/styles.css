@@ -663,7 +663,7 @@ ser alcanzado por determinados puntos durante la animación. */
 @media screen and (min-width: 480px) and (max-width: 767px) and (orientation: landscape) {
     /* Tu CSS aquí */
 }
-
+/* * Tables* */
 @media screen and (min-width: 768px) {
 
     /** SOBRE MI */
@@ -741,10 +741,6 @@ ser alcanzado por determinados puntos durante la animación. */
         margin-bottom: 1rem;
     }
 
-
-
-
-
     /* *CONTACTO */
     .contact {
         display: flex;
@@ -795,7 +791,7 @@ ser alcanzado por determinados puntos durante la animación. */
 }
 
 /** Desktops */
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
     header {
         background-color: var(--first-color);
         width: auto;
@@ -952,10 +948,7 @@ ser alcanzado por determinados puntos durante la animación. */
         animation: slide 5s linear infinite;
     }
 
-    /*! REVISAR  IMAGENES EN MODO RESPONSIVE*/
     .ability__image {
-        /*  width: 70px; */
-        /* Tamaño de imagen para pantallas grandes */
         max-width: 20%;
         /* Tamaño de imagen para pantallas grandes */
     }
@@ -985,16 +978,14 @@ ser alcanzado por determinados puntos durante la animación. */
     }
 
     .project__card {
-        max-width: 21vw;
+        max-width: auto;
     }
 
-    .project__list {
+    .project__list, .project__list--modified{
         display: flex;
         flex-wrap: wrap;
-       
-        margin-bottom: 2rem;
+        margin-bottom: 1.2rem;
     }
-
     .project__card.scroll-down {
         animation-name: inherit;
     }
@@ -1057,5 +1048,11 @@ ser alcanzado por determinados puntos durante la animación. */
 
     .contact__form {
         max-width: 40%;
+    }
+}
+@media screen and (min-width: 1280px) {
+    /* *PROYECTOS* */
+    .project__card {
+        max-width: 21vw;
     }
 }
