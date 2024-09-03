@@ -763,15 +763,12 @@ ser alcanzado por determinados puntos durante la animación. */
         height: 12vh;
     }
 
-<<<<<<< HEAD
-=======
     .project__technologies img {
         width: 1.5vw;
     }
 
 
 
->>>>>>> erik
     /* *CONTACTO */
     .contact {
         display: flex;
@@ -1015,12 +1012,8 @@ ser alcanzado por determinados puntos durante la animación. */
     .project__list, .project__list--modified{
         display: flex;
         flex-wrap: wrap;
-<<<<<<< HEAD
-        margin-bottom: 1.2rem;
-=======
 
         margin-bottom: 2rem;
->>>>>>> erik
     }
     .project__card.scroll-down {
         animation-name: inherit;
