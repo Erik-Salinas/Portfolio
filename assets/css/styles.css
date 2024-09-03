@@ -301,13 +301,18 @@ img {
     padding: 0 0.5rem;
 }
 
-.ability__image--mysql {
+.ability__image--mysql,
+.project__technologies--mysql {
     background-color: #ffffff;
     border-radius: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 70px;
+}
+
+.project__technologies--mysql {
+    height: auto;
 }
 
 .ability__image--mysql img {
@@ -381,7 +386,17 @@ img {
     font-family: var(--text-tyupografia);
     font-size: var(--text-size);
     line-height: 1.5;
-    margin-bottom: 1rem;
+    height: 15vh;
+}
+
+.project__technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.project__technologies img {
+    width: 8vw;
 }
 
 .project__link {
@@ -499,7 +514,7 @@ img {
     text-align: center;
 }
 
-.contact__form-loader--send{
+.contact__form-loader--send {
     font-size: 1.5rem;
     color: #000000;
     font-family: var(--text-tyupografia);
@@ -587,7 +602,8 @@ ser alcanzado por determinados puntos durante la animación. */
         opacity: 1;
     }
 }
-.fa-whatsapp{
+
+.fa-whatsapp {
     font-size: 3rem;
     color: #ffffff;
     background-color: #0cba0c;
@@ -601,6 +617,7 @@ ser alcanzado por determinados puntos durante la animación. */
     text-align: center;
     cursor: pointer;
 }
+
 /* *PIE DE PAGÍNA */
 .footer {
     background-color: var(--first-color);
@@ -661,7 +678,16 @@ ser alcanzado por determinados puntos durante la animación. */
 
 /* Pantallas pequeñas en posición horizontal (celulares) */
 @media screen and (min-width: 480px) and (max-width: 767px) and (orientation: landscape) {
-    /* Tu CSS aquí */
+    .profile__image {
+        display: block;
+        margin: auto;
+        width: 50%;
+        border-radius: 100%;
+    }
+    .project__technologies img {
+        width: 5vw;
+    }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -687,7 +713,7 @@ ser alcanzado por determinados puntos durante la animación. */
     }
 
     /* *PROYECTOS* */
-     .project {
+    .project {
         margin: 2rem 4rem 2rem 4rem;
     }
 
@@ -698,14 +724,15 @@ ser alcanzado por determinados puntos durante la animación. */
     .project__card {
         max-width: 40vw;
     }
- 
-     .project__list {
+
+    .project__list {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 1.2rem;
     }
-    .project__list--modified{
+
+    .project__list--modified {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -734,14 +761,12 @@ ser alcanzado por determinados puntos durante la animación. */
 
     .project__description,
     .contact__description {
-        color: var(--text-second-color);
-        font-family: var(--text-tyupografia);
-        font-size: var(--text-size);
-        line-height: 1.5;
-        margin-bottom: 1rem;
+        height: 12vh;
     }
 
-
+    .project__technologies img {
+        width: 1.5vw;
+    }
 
 
 
@@ -764,7 +789,7 @@ ser alcanzado por determinados puntos durante la animación. */
     .contact__form {
         width: 100%;
     }
-    
+
     /* *FOOTER* */
     .footer {
         margin-top: 4rem;
@@ -991,7 +1016,7 @@ ser alcanzado por determinados puntos durante la animación. */
     .project__list {
         display: flex;
         flex-wrap: wrap;
-       
+
         margin-bottom: 2rem;
     }
 
@@ -1019,11 +1044,7 @@ ser alcanzado por determinados puntos durante la animación. */
 
     .project__description,
     .contact__description {
-        color: var(--text-second-color);
-        font-family: var(--text-tyupografia);
-        font-size: var(--text-size);
-        line-height: 1.5;
-        margin-bottom: 1rem;
+        height: 21vh;
     }
 
 
