@@ -4,8 +4,6 @@
 
     --nav-typografia: "Montserrat", sans-serif;
     /* 400 */
-    --title-tyupografia: "Playfair Display", serif;
-    /* 400 y 700 */
     --text-tyupografia: "Roboto", sans-serif;
     /* 400 */
 
@@ -233,7 +231,7 @@ img {
     font-size: var(--title-size);
     font-weight: 700;
     text-align: center;
-    font-family: var(--title-tyupografia);
+    font-family: var(--text-tyupografia);
     color: var(--title-color);
 }
 
@@ -393,6 +391,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+    height: 1vh;
 }
 
 .project__technologies img {
@@ -403,7 +402,7 @@ img {
     display: flex;
     justify-content: end;
     gap: 10px;
-    padding: 0.4rem 0;
+    padding: 2rem 0 0.4rem 0;
 }
 
 .project__a {
