@@ -35,6 +35,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- *AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- *CSS -->
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
@@ -180,7 +182,7 @@
       <article id="projects" class="project">
         <h2 class="project__title">PROYECTOS</h2>
         <div class="project__list">
-          <article class="project__card">
+          <article class="project__card" data-aos="zoom-in" data-aos-duration="2000">
             <img class="project__image" src="assets/img/portafolio.png" alt="Portafolio de erik salinas" />
             <div class="project__information">
               <h3 class="project__name">Portafolio</h3>
@@ -203,7 +205,7 @@
               </div>
             </div>
           </article>
-          <article class="project__card">
+          <article class="project__card" data-aos="zoom-in" data-aos-duration="2000">
             <img class="project__image" src="assets/img/ericin-pro-cleaners.png" alt="Ericin Pro Cleaners" />
             <div class="project__information">
               <h3 class="project__name">Empresa de limpieza</h3>
@@ -225,34 +227,26 @@
               </div>
             </div>
           </article>
-          <article class="project__card">
-            <img class="project__image" src="assets/img/mibbanx.png" alt="Mibbanx tienda de compra y venta" />
+          <article class="project__card" data-aos="zoom-in" data-aos-duration="2000">
+            <img class="project__image" src="assets/img/grupo-el-positivo.png"
+              alt="Grupo el positivo tienda de venta" />
             <div class="project__information">
-              <h3 class="project__name">Mibbanx</h3>
+              <h3 class="project__name">Grupo el positivo</h3>
               <p class="project__description">
-                Continúo participando en una tienda en línea, donde mi rol implica la actualización constante del código
+                Una tienda en línea, donde mi rol implico la actualización constante del código
                 para mejorar la funcionalidad y la experiencia del usuario.
               </p>
               <div class="project__technologies">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-                  alt="HTML">
-                  <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS">
-                <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-                alt="JAVASCRIPT">
-                <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MYSQL" class="project__technologies--mysql">
-                <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP">
+                <img src="assets/img/wordpress.jpg" alt="WORDPRESS">
               </div>
               <div class="project__link">
-                <a href="#" class="project__a project__a--disable" target="_blank"> Código</a>
-                <a href="https://www.mibbanx.com/" class="project__a" target="_blank"> Página</a>
+                <a href="#" class="project__a project__a--disable"
+                  target="_blank"> Código</a>
+                <a href="https://www.grupoelpositivo.com.ar/" class="project__a" target="_blank"> Página</a>
               </div>
             </div>
           </article>
-          <article class="project__card">
+          <article class="project__card" data-aos="zoom-in" data-aos-duration="2000">
             <img class="project__image" src="assets/img/psicologa-dra-andrea-morales.png"
               alt="Piscologa Dra Andrea Morales" />
             <div class="project__information">
@@ -279,7 +273,7 @@
           </article>
         </div>
         <div class=" project__list--modified">
-          <article class="project__card project__card--soon">
+          <article class="project__card project__card--soon" data-aos="zoom-in" data-aos-duration="2000">
             <img class="project__image" src="assets/img/freedom.png" alt="Tienda de linceria Freedom" />
             <div class="project__information">
               <h3 class="project__name"> E-commerce de Lencería</h3>
@@ -302,7 +296,7 @@
               </div>
             </div>
           </article>
-          <article class="project__card project__card--soon">
+          <article class="project__card project__card--soon" data-aos="zoom-in" data-aos-duration="2000">
             <img class="project__image" src="assets/img/construccion.gif" alt="Pagina web en construción" />
             <div class="project__information">
               <h3 class="project__name">Proximamente</h3>
@@ -312,7 +306,9 @@
                 y esfuerzo. ¡Permanece atento para más novedades!
               </p>
               <div class="project__technologies">
-
+                <img src="assets/img/signo-pregunta.jpg" alt="signo de pregunta" class="sign">
+                <img src="assets/img/signo-pregunta.jpg" alt="signo de pregunta" class="sign">
+                <img src="assets/img/signo-pregunta.jpg" alt="signo de pregunta" class="sign">
               </div>
               <div class="project__link">
                 <a href="#" class="project__a project__a--disable"> Código</a>
@@ -411,8 +407,11 @@
     </div>
   </footer>
   <script src="assets/javascript/menu.js"></script>
-  <script src="assets/javascript/scroll.js"></script>
   <script src="assets/javascript/form.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init(); // Inicializa AOS
+  </script>
 </body>
 
 </html>

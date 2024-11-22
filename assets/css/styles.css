@@ -338,28 +338,11 @@ img {
     background-color: var(--first-color);
     border-radius: 5px;
     margin-top: 1rem;
-    view-timeline-name: --image;
-    view-timeline-axis: block;
-    /* Efecto vertical | inline horizontal*/
-    animation-timeline: --image;
-    animation-range: entry 25% cover;
-    animation-fill-mode: both;
-}
-
-.project__card.scroll-down {
-    animation-name: show;
-}
-
-@keyframes show {
-    from {
-        opacity: 0.8;
-        scale: 50%;
-    }
-
-    to {
-        opacity: 1;
-        scale: 100%;
-    }
+    display: flex;
+    flex-direction: column;
+    /* Asegura que los elementos se apilen verticalmente */
+    height: 100%;
+    /* Para que las tarjetas tengan alturas uniformes */
 }
 
 .project__image {
@@ -376,9 +359,27 @@ img {
     font-family: var(--text-tyupografia);
     font-size: var(--card-size);
     margin: 0.5rem 0;
+    /* Activar */
 }
 
-.project__description,
+/*? AGREGAR MAS TEXTO EN DONDE FALTA LAS CARDS */
+.project__description {
+    color: var(--text-second-color);
+    font-family: var(--text-tyupografia);
+    font-size: var(--text-size);
+    line-height: 1.5;
+    height: 6rem;
+    /* Fija la altura de la descripción  */
+    overflow: hidden;
+    /* Evita que el contenido sobrepase el contenedor
+*/
+    text-overflow: ellipsis;
+    /* Trunca el texto con puntos suspensivos si es necesario */
+    /* background-color: red; */
+    margin-bottom: 1rem;
+
+}
+
 .contact__description {
     color: var(--text-second-color);
     font-family: var(--text-tyupografia);
@@ -391,11 +392,16 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    height: 1vh;
+    /* height: 1vh; */
+    /*  */
 }
 
 .project__technologies img {
     width: 8vw;
+}
+
+.project__technologies>.sign {
+    background-color: white;
 }
 
 .project__link {
@@ -683,11 +689,13 @@ ser alcanzado por determinados puntos durante la animación. */
         width: 50%;
         border-radius: 100%;
     }
+
     .project__technologies img {
         width: 5vw;
     }
 
 }
+
 /* * Tables* */
 @media screen and (min-width: 768px) {
 
@@ -714,6 +722,12 @@ ser alcanzado por determinados puntos durante la animación. */
     /* *PROYECTOS* */
     .project {
         margin: 2rem 4rem 2rem 4rem;
+    }
+    /* Atributos de AOS */
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
     }
 
     .project__title {
@@ -758,13 +772,19 @@ ser alcanzado por determinados puntos durante la animación. */
         margin: 0.5rem 0;
     }
 
-    .project__description,
+    /* !REVISAR */
+    .project__description {
+        height: 7.5rem;
+        /* Fija la altura de la descripción 10 rem en pc */
+    }
+
+    /* !REVISAR */
     .contact__description {
         height: 12vh;
     }
 
     .project__technologies img {
-        width: 1.5vw;
+        width: 4vw;
     }
 
 
@@ -997,51 +1017,22 @@ ser alcanzado por determinados puntos durante la animación. */
     }
 
     /* *PROYECTOS* */
+
     .project {
         margin: 2rem 4rem 2rem 4rem;
-    }
-
-    .project__title {
-        text-align: start;
     }
 
     .project__card {
         max-width: auto;
     }
 
-    .project__list, .project__list--modified{
-        display: flex;
-        flex-wrap: wrap;
-
-        margin-bottom: 2rem;
-    }
-    .project__card.scroll-down {
-        animation-name: inherit;
+    .project__technologies img {
+        width: 2vw;
     }
 
-    .project__image {
-        object-fit: cover;
-        height: 25vh;
-    }
-
-    .project__information {
-        padding: 0.5rem;
-        flex: 1;
-    }
-
-
-    .project__name {
-        color: var(--title-first-color);
-        font-family: var(--text-tyupografia);
-        font-size: var(--card-size);
-        margin: 0.5rem 0;
-    }
-
-    .project__description,
     .contact__description {
         height: 21vh;
     }
-
 
     .project__a:hover {
         font-size: var(--botton-size);
@@ -1075,7 +1066,9 @@ ser alcanzado por determinados puntos durante la animación. */
         max-width: 40%;
     }
 }
+
 @media screen and (min-width: 1280px) {
+
     /* *PROYECTOS* */
     .project__card {
         max-width: 21vw;
